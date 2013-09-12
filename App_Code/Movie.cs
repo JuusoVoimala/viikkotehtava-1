@@ -14,9 +14,9 @@ public class Movie
   public static List<Movie> Get3Movies()
   {
     var muuvit = new List<Movie>();
-    muuvit.Add(new Movie() { Title = "Pahat pojat", Director = "Aleksi Mäkelä", Year = 2003 });
-    muuvit.Add(new Movie() { Title = "Napapiirin sankarit", Director = "Dome Karukoski", Year = 2010 });
-    muuvit.Add(new Movie() { Title = "Uuno Turhapuro armeijan leivissä", Director = "Ere Kokkonen", Year = 1984 });
+    muuvit.Add(new Movie() { Title = "Pahat kissat", Director = "Aleksi Mäkelä", Year = 2003 });
+    muuvit.Add(new Movie() { Title = "Napapiirin sankarikissat", Director = "Dome Karukoski", Year = 2010 });
+    muuvit.Add(new Movie() { Title = "Uuno Turhapuro kissan leivissä", Director = "Ere Kokkonen", Year = 1984 });
     return muuvit;
   }
 }
