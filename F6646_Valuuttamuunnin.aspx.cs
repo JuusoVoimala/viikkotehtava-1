@@ -11,8 +11,33 @@ public partial class F6646_Valuuttamuunnin : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (String.IsNullOrEmpty((string)Session["laskuri"]))
+        {
+            Session["laskuri"] = "0";
+        }
+        string nimi = (string)Session["nimi"];
 
+        if (!String.IsNullOrEmpty(nimi))
+        {
+            txtUser.Text = nimi;
+        }
+        else if (!String.IsNullOrEmpty(Request.QueryString["nimi"]))
+        {
+
+            txtUser.Text = Request.QueryString["nimi"];
+        }
+        else if (!String.IsNullOrEmpty(Request.Cookies["nimi"].Value))
+        {
+            txtUser.Text = Request.Cookies["nimi"].Value;
+        }
+        else
+        {
+            txtUser.Text = "vakio";
+        }
     }
+
+
+
     protected void Button3_Click(object sender, EventArgs e)
     {
         try

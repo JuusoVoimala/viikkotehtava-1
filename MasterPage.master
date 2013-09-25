@@ -12,28 +12,14 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <img src="images/Logo.PNG" />
+        <img src="images/Logo.PNG" width="600" />
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>
     </div>
-        <div><h2>
-            <asp:Label ID="Label1" runat="server" Text="Tänään on: " OnInit="Label1_Init"></asp:Label>
-            </h2>
-            <h2>
-                <asp:Label ID="Label2" runat="server" Text="Valitse haluamasi päivä: " OnInit="Label2_Init"></asp:Label>
-            </h2>
-            <h2>
-                <asp:Label ID="Label3" runat="server" Text="Valitun päivän ja tämän päivän erotus on: 0"></asp:Label>
-            </h2>
-            <h2>
-                <asp:Button ID="Button1" runat="server" Text="< vuosi" OnClick="Button1_Click" />
-&nbsp;<asp:Button ID="Button2" runat="server" Text="vuosi >" OnClick="Button2_Click" />
-            </h2>
-            <h2>
-                <asp:Calendar ID="Calendar1" runat="server" OnInit="Calendar1_Init" OnSelectionChanged="Calendar1_SelectionChanged" VisibleDate="2013-10-10"></asp:Calendar>
-            </h2>
-            <h2>Copyright Juuso&Voimala</h2></div>
+        <div>
+            <h2>Copyright Juuso&Voimala</h2>
+        </div>
     </form>
 </body>
 </html>

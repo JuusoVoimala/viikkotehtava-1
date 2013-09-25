@@ -8,6 +8,12 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <h1>
+            TÄMÄ EI OLE ENÄÄ AJANTASALLA! KÄYTÄ
+            <asp:HyperLink ID="hyperlink4" runat="server" NavigateUrl="~/F6646_indexMP.aspx">F6646_indexMP.aspx </asp:HyperLink>
+            Siellä uusimmat linkit tehtäviin!!!
+        </h1>
+        <br/>
         <h1>Viikon 37 tuntiharkat</h1>
         <div>
             <asp:HyperLink ID="hyperlink1" runat="server" NavigateUrl="~/Tehtava1.aspx">Tehtävä jeejeejee</asp:HyperLink>
