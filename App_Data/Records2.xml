@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<catalog>
+    <record title="First Album"
+      artist="Pete Parkkonen"
+      country="Finland"
+      year="2009">
+    </record>
+    <record title="Second Shot"
+      artist="Alice In Wonderland"
+      country="USA"
+      year="2010">
+    </record>
+    <record title="Valkoinen kupla"
+      artist="Eppu Normaali"
+      country="Finland"
+      year="1986">
+</record>
+</catalog>

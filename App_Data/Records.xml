@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<catalog>
+  <record>
+    <title>Valkoinen kupla</title>
+    <artist>Eppu Normaali</artist>
+    <country>Suomi</country>
+    <year>1986</year>
+    <value>10</value>
+  </record>
+  <record>
+    <title>Imperiumin vastaisku</title>
+    <artist>Eppu Normaali</artist>
+    <country>Suomi</country>
+    <year>1998</year>
+    <value>15</value>
+  </record>
+  <record>
+    <title>Sadan vuoden paastakin</title>
+    <artist>Eppu Normaali</artist>
+    <country>Suomi</country>
+    <year>2006</year>
+    <value>10</value>
+  </record>
+  <record>
+    <title>Roadrunner</title>
+    <artist>Hurriganes</artist>
+    <country>Ruottsi</country>
+    <year>1975</year>
+    <value>100</value>
+  </record>
+  <record>
+    <title>Still got the blues</title>
+    <artist>Gary Moore</artist>
+    <country>UK</country>
+    <year>1990</year>
+    <value>25</value>
+  </record>
+  <record>
+    <title>Afterburner</title>
+    <artist>ZZ Top</artist>
+    <country>USA</country>
+    <year>1985</year>
+    <value>50</value>
+  </record>
+  <record>
+    <title>Hotel California</title>
+    <artist>Eagles</artist>
+    <country>USA</country>
+    <year>1976</year>
+    <value>40</value>
+  </record>
+  <record>
+    <title>High Voltage</title>
+    <artist>AC DC</artist>
+    <country>Australia</country>
+    <year>1975</year>
+    <value>200</value>
+  </record>
+  <record>
+    <title>T.N.T</title>
+    <artist>AC DC</artist>
+    <country>Australia</country>
+    <year>1975</year>
+    <value>250</value>
+  </record>
+    <record>
+    <title>Dirty Deeds Done Dirt Cheep</title>
+    <artist>AC DC</artist>
+    <country>Australia</country>
+    <year>1976</year>
+    <value>275</value>
+  </record>
+  <record>
+    <title>Hoedown</title>
+    <artist>Hoedown</artist>
+    <country>Suomi</country>
+    <year>2008</year>
+    <value>20</value>
+  </record>
+</catalog>
