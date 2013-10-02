@@ -6,9 +6,12 @@
 
 
     <div>
-
+        <h1>Viikkotehtävä 3</h1>
+        <div>
+            <asp:HyperLink ID="hyperlink6" runat="server" NavigateUrl="~/F6646_vk03.aspx">Tehtävä 3</asp:HyperLink>
+        </div>
         
-            <h1>Viikkotehtävät 1 ja 2</h1>
+        <h1>Viikkotehtävät 1 ja 2</h1>
         <div>
             <h3>Tässä suoraan 1. tehtävän "eka sivu"</h3>
             <asp:Textbox ID="txtName" runat="server" Text="Tähän nimesi" ></asp:Textbox>

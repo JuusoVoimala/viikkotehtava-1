@@ -15,13 +15,13 @@
         <img src="images/TopBanner.jpg" width="600" />
         <br/>
         <div>
-            <asp:Menu id="jokuMenu" Orientation="Horizontal" runat="server" class="menu">
+            <asp:Menu id="jokuMenu" Orientation="Horizontal" runat="server" class="menu" OnMenuItemClick="MainMenu_MenuItemClick">
                 <Items>
-                    <asp:MenuItem Text="Home"></asp:MenuItem>
-                    <asp:MenuItem Text="Products"></asp:MenuItem>
-                    <asp:MenuItem Text="Puunäkymä"></asp:MenuItem>
-                    <asp:MenuItem Text="About Us"></asp:MenuItem>
-                    <asp:MenuItem Text="Contact"></asp:MenuItem>
+                    <asp:MenuItem Text="Home" Value="Home"></asp:MenuItem>
+                    <asp:MenuItem Text="Products" Value="Products"></asp:MenuItem>
+                    <asp:MenuItem Text="Puunäkymä" Value="Puu"></asp:MenuItem>
+                    <asp:MenuItem Text="About Us" Value="About"></asp:MenuItem>
+                    <asp:MenuItem Text="Contact" Value="Contact"></asp:MenuItem>
                 </Items>
             </asp:Menu>
         </div>
