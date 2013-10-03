@@ -38,6 +38,11 @@
         <div>
             <asp:HyperLink ID="hyperlink5" runat="server" NavigateUrl="~/F6646_age.aspx">Demo of</asp:HyperLink>
         </div>
+        <h1>Tuntitehtävä vko 40</h1>
+        <div>
+            <asp:HyperLink ID="hyperlink7" runat="server" NavigateUrl="~/F6646_RSSfeeds.aspx">RSS-feedit kolmesta eri lähteestä</asp:HyperLink>
+            <asp:HyperLink ID="hyperlink8" runat="server" NavigateUrl="~/F6646_FinnKinoMovies.aspx">FinnKinon rainat</asp:HyperLink>
+        </div>
     </div>
 
 
