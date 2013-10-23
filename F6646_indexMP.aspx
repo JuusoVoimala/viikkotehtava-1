@@ -6,6 +6,11 @@
 
 
     <div>
+        <h1>Opintojakson välipalaute</h1>
+        <div>
+            <asp:HyperLink ID="hyperlink9" runat="server" NavigateUrl="~/OpintojaksonPalaute.aspx">Tehtävä 3</asp:HyperLink>
+        </div>
+
         <h1>Viikkotehtävä 3</h1>
         <div>
             <asp:HyperLink ID="hyperlink6" runat="server" NavigateUrl="~/F6646_vk03.aspx">Tehtävä 3</asp:HyperLink>

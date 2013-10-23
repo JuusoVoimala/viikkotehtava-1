@@ -46,49 +46,10 @@ public partial class OpintojaksonPalaute : System.Web.UI.Page
         this.tbxHuonoa.Text = "";
         this.tbxMuuta.Text = "";
 
-
-       /* using (XmlWriter writer = XmlWriter.Create(MapPath("~/App_Data/Palautteet.xml")))
-        {
-            writer.WriteStartDocument();
-            writer.WriteStartElement("palautteet");
-
-            
-                writer.WriteStartElement("palaute");
-
-                writer.WriteElementString("pvm", tbxPvm.Text);
-                writer.WriteElementString("tekija", tbxNimi.Text);
-                writer.WriteElementString("opittu", tbxOlenOppinut.Text);
-                writer.WriteElementString("haluanoppia", tbxHaluanOppia.Text);
-                writer.WriteElementString("hyvaa", tbxHyvaa.Text);
-                writer.WriteElementString("parannettavaa", tbxHuonoa.Text);
-                writer.WriteElementString("muuta", tbxMuuta.Text);
-
-
-                writer.WriteEndElement();
-            
-
-            writer.WriteEndElement();
-            writer.WriteEndDocument();
-        }*/
     }
     protected void btnNaytaPalautteet_Click(object sender, EventArgs e)
     {
-        DataTable table = new DataTable("XmlData");
-
-        using (Stream stream = new FileStream(MapPath("~/App_Data/Palautteet.xml"), FileMode.Open, FileAccess.Read))
-        {
-            //create the table with the appropriate column names
-            table.Columns.Add("Pvm", typeof(string));
-            table.Columns.Add("Nimi", typeof(int));
-            table.Columns.Add("Opittu", typeof(string));
-            table.Columns.Add("Haluan oppia", typeof(string));
-            table.Columns.Add("Hyvää", typeof(string));
-            table.Columns.Add("Parannettavaa", typeof(string));
-            table.Columns.Add("Muuta", typeof(string));
-
-            //use ReadXml to read the XML stream
-            table.ReadXml(stream);
-
-        } 
+        var response = base.Response;
+        response.Redirect("~/OpintojaksonPalauteKatselu.aspx");
     }
 }

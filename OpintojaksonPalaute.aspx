@@ -40,7 +40,7 @@
     <br/>
     <asp:Button ID="btnNaytaPalautteet" runat="server" Text="Näytä palautteet" CausesValidation="False" OnClick="btnNaytaPalautteet_Click" />
     <br/>
-    <asp:data
+    
 
 </asp:Content>
 
