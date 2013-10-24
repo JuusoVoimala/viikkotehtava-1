@@ -6,9 +6,19 @@
 
 
     <div>
+        <h1>Viikkotehtävä 5</h1>
+        <div>
+            <asp:HyperLink ID="hyperlink12" runat="server" NavigateUrl="~/F6646_vk05.aspx">Tehtävä 5 (LevykauppaX)</asp:HyperLink>
+        </div>
+
+        <h1>Viikkotehtävä 4</h1>
+        <div>
+            <asp:HyperLink ID="hyperlink10" runat="server" NavigateUrl="~/F6646_vk04.aspx">Tehtävä 4 (Wanhat Autot)</asp:HyperLink>
+        </div>
+
         <h1>Opintojakson välipalaute</h1>
         <div>
-            <asp:HyperLink ID="hyperlink9" runat="server" NavigateUrl="~/OpintojaksonPalaute.aspx">Tehtävä 3</asp:HyperLink>
+            <asp:HyperLink ID="hyperlink9" runat="server" NavigateUrl="~/OpintojaksonPalaute.aspx">Palaute</asp:HyperLink>
         </div>
 
         <h1>Viikkotehtävä 3</h1>
