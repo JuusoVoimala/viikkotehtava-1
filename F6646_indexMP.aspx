@@ -6,6 +6,11 @@
 
 
     <div>
+        <h1>Viikkotehtävä 6</h1>
+        <div>
+            <asp:HyperLink ID="hyperlink11" runat="server" NavigateUrl="~/F6646_vk06.aspx">Tehtävä 6 (SM-liigan outojen olioitten seikkailut Webissä)</asp:HyperLink>
+        </div>
+
         <h1>Viikkotehtävä 5</h1>
         <div>
             <asp:HyperLink ID="hyperlink12" runat="server" NavigateUrl="~/F6646_vk05.aspx">Tehtävä 5 (LevykauppaX)</asp:HyperLink>
