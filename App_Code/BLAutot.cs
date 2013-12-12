@@ -6,6 +6,8 @@ using System.Xml.Linq;
 using System.Xml.Serialization;
 using System.IO;
 using System.Text.RegularExpressions;
+using System.Security.Cryptography;
+using System.Text;
 
 
 public class BLAutot
@@ -30,8 +32,14 @@ public class BLAutot
         return autoLista;
     }
 
-    public static void VieAutot(AutoLista autot)
+    public static void VieAutot(List<Auto> autoLista)
     {
+        AutoLista autot = new AutoLista();
+        foreach (Auto item in autoLista)
+        {
+            autot.Autot.Add(item);
+        }
+
         Serialisointi.SerialisoiXml(HttpContext.Current.Server.MapPath("~/App_Data/WanhatAutot.xml"), autot);
     }
 
@@ -71,6 +79,8 @@ public class BLAutot
         Regex regVm = new Regex(@"^[0-9]{4}$");
         Regex regMyyntiHinta = new Regex(@"^[0-9]{1,9}$");
         Regex regOstoHinta = new Regex(@"^[0-9]{1,9}$");
+        Regex regUserName = new Regex(@"^[a-zA-Z0-9]{1,15}$");
+        Regex regPassword = new Regex(@"^[\S*\s*]{1,20}$");
 
         switch (kohde)
         {
@@ -88,9 +98,36 @@ public class BLAutot
                 return regMyyntiHinta.Match(tarkistettava).ToString();
             case "OstoHinta":
                 return regOstoHinta.Match(tarkistettava).ToString();
+            case "userName":
+                return regUserName.Match(tarkistettava).ToString();
+            case "password":
+                return regPassword.Match(tarkistettava).ToString();
             default:
                 return "Tapahtui virhe";
         }
+    }
+
+    public static bool authenticateUser(string userName, string passWord)
+    {
+        Users kayttajat = new Users();
+
+        Serialisointi.deSerialisoiKayttajat(HttpContext.Current.Server.MapPath("~/App_Data/Kayttajat.xml"), ref kayttajat);
+
+        byte[] saltBytes = new byte[] { 12, 254, 62, 6, 7, 42, 2, 96 };
+        byte[] saltedHashBytesUserName = new HMACMD5(saltBytes).ComputeHash(Encoding.UTF8.GetBytes(userName));
+        byte[] saltedHashBytesPassword = new HMACMD5(saltBytes).ComputeHash(Encoding.UTF8.GetBytes(passWord));
+
+        string saltedHashStringUserName = Convert.ToBase64String(saltedHashBytesUserName);
+        string saltedHashStringPassword = Convert.ToBase64String(saltedHashBytesPassword);
+
+        for (int i = 0; i < kayttajat.kayttajat.Count; i++)
+        {
+            if (saltedHashStringUserName == kayttajat.kayttajat[i].UserName && saltedHashStringPassword == kayttajat.kayttajat[i].Password)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 }
 
@@ -121,6 +158,25 @@ public class Serialisointi
         {
             FileStream xmlFile = new FileStream(filePath, FileMode.Open);
             autot = (AutoLista)deserializer.Deserialize(xmlFile);
+            xmlFile.Close();
+        }
+        catch (Exception ex)
+        {
+            throw ex;
+        }
+        finally
+        {
+
+        }
+    }
+
+    public static void deSerialisoiKayttajat(string filePath, ref Users kayttajat)
+    {
+        XmlSerializer deserializer = new XmlSerializer(typeof(Users));
+        try
+        {
+            FileStream xmlFile = new FileStream(filePath, FileMode.Open);
+            kayttajat = (Users)deserializer.Deserialize(xmlFile);
             xmlFile.Close();
         }
         catch (Exception ex)
@@ -171,4 +227,30 @@ public class AutoLista
     }
 }
 
+[Serializable()]
+public class User
+{
+    [XmlElement("Name")]
+    public string Name { get; set; }
+    [XmlElement("UserName")]
+    public string UserName { get; set; }
+    [XmlElement("Password")]
+    public string Password { get; set; }
 
+    public User()
+    {
+    }
+}
+
+[Serializable()]
+[XmlRoot("Users")]
+public class Users
+{
+    [XmlElement("User")]
+    public List<User> kayttajat { get; set; }
+
+    public Users()
+    {
+        kayttajat = new List<User>();
+    }
+}

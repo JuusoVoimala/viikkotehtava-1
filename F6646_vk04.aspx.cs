@@ -42,7 +42,7 @@ public partial class F6646_vk04 : System.Web.UI.Page
 
         ddCarModel.DataSource = table;
         ddCarModel.DataBind();
-        //ddCarModel.SelectedIndex = 1;
+        ddCarModel.SelectedIndex = 1;
 
         DataTable dt = table.Clone();
         Random rnd = new Random();
